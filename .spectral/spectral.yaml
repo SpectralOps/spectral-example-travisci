@@ -1,0 +1,37 @@
+# Spectral
+# 
+# Here's a result run of the initial configuration, placed in '.spectral/'
+#
+# $ spectral
+#
+# [sample] ------------- summary -------------
+# [sample] AWS0001 - No AWS secrets in python files.
+# sp
+# - /../spectral/src/sp.py (AKIA223)
+# [sample] total 8 byte(s), 1 file(s), 1 match(es) in 14ms
+#
+#
+
+
+# you can omit the reporter section entirely (you'll get a console reporter by default)
+reporter:
+    outputs:
+        stylish: {}        # nice looking CLI reports
+        # stylish: { html: "output.html" }  # produce HTML reports
+        # stylish: { csv: "output.csv" }  # produce CSV reports
+        # log: {}          # Timestamped logs of results
+        # json: {}         # Use this for integration with tools, scripts of your own
+        junit: {}        # Great for integrating with CI systems that understand JUnit XML (all of them, probably)
+        # ignores: {}      # A reporter output that streams results as ignores
+        # command: {}     # Stream results into a command/binary of your own
+        # github: {}       # Beta. Results appear on pull request and fail/pass a PR.
+        # clib: {}         # Beta. Results are IPC'd to a C-lib compiled library
+        # analytics: {}
+
+projects:
+    default:
+        project:
+            name: default
+        input:
+            - local: ../src
+              name: sources
