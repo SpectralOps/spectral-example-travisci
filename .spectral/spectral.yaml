@@ -21,7 +21,7 @@ reporter:
         # stylish: { csv: "output.csv" }  # produce CSV reports
         # log: {}          # Timestamped logs of results
         # json: {}         # Use this for integration with tools, scripts of your own
-        junit: {}        # Great for integrating with CI systems that understand JUnit XML (all of them, probably)
+        # junit: {}        # Great for integrating with CI systems that understand JUnit XML (all of them, probably)
         # ignores: {}      # A reporter output that streams results as ignores
         # command: {}     # Stream results into a command/binary of your own
         # github: {}       # Beta. Results appear on pull request and fail/pass a PR.
@@ -33,5 +33,5 @@ projects:
         project:
             name: default
         input:
-            - local: ../src
+            - local: .
               name: sources
